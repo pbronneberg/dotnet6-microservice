@@ -17,14 +17,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// No need for HTTPS redirection. TLS is a infrastructure concern
 // app.UseHttpsRedirection();
 
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
-
-// app.MapGet("/", () => @"Simple API! Checkout the <a href='/swagger'>API spec</a>");
 
 app.MapGet("/weatherforecast", () =>
 {
