@@ -20,6 +20,8 @@ if (app.Environment.IsDevelopment())
 // No need for HTTPS redirection. TLS is a infrastructure concern
 // app.UseHttpsRedirection();
 
+app.MapGet("/health", () => "ok");
+
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
