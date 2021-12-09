@@ -1,5 +1,7 @@
 # DOTNET 6 Microservice Examples 
 
+[![CI](https://github.com/pbronneberg/dotnet6-microservice/actions/workflows/CI.yml/badge.svg)](https://github.com/pbronneberg/dotnet6-microservice/actions/workflows/CI.yml)
+
 Repository to check new .Net 6 functionality.
 
 ## Prerequisites
