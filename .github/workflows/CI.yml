@@ -36,7 +36,7 @@ jobs:
       - name: Build the template
         run: dotnet build --configuration Release --no-restore minimal
       - name: Test the template
-        run: dotnet test --verbosity normal .
+        run: dotnet test --verbosity normal minimal
 
   build-minimal-docker:
     # The type of runner that the job will run on
