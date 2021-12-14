@@ -6,7 +6,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+var basePath = app.Configuration["BasePath"] ?? "/";
 
+app.UsePathBase(basePath);
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
