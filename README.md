@@ -1,5 +1,7 @@
 # DOTNET 6 Microservice Examples 
 
+[![CI](https://github.com/pbronneberg/dotnet6-microservice/actions/workflows/CI.yml/badge.svg)](https://github.com/pbronneberg/dotnet6-microservice/actions/workflows/CI.yml)
+
 Repository to check new .Net 6 functionality.
 
 ## Prerequisites
@@ -22,15 +24,16 @@ API style competing with 'Python FAST API'
 - Background info: [MSDN Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0&tabs=visual-studio)
 - Docker Image size: 104MB (alpine)
 
-### Building
+### Building & Running
 
-Building & running on a local machine with SDK installed:
+On a local machine with SDK installed:
 ```BASH
 dotnet restore minimal
 dotnet run minimal
 ```
 
-Building & running using docker
+Using docker:
 ```BASH
-docker run -p:8000:80 minimal
+docker build ./minimal -t minimal:latest
+docker run -p:8000:80 minimal:latest
 ```

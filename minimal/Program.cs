@@ -6,7 +6,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+var basePath = app.Configuration["BasePath"] ?? "/";
 
+app.UsePathBase(basePath);
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
@@ -19,6 +21,8 @@ if (app.Environment.IsDevelopment())
 
 // No need for HTTPS redirection. TLS is a infrastructure concern
 // app.UseHttpsRedirection();
+
+app.MapGet("/health", () => "ok");
 
 var summaries = new[]
 {
