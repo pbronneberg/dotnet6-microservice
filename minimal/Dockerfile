@@ -13,7 +13,7 @@ COPY . .
 RUN dotnet publish -c $CONFIG -o /app
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine
+FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine
 ARG DEFAULT_ENVIRONMENT="Development"
 ENV ASPNETCORE_ENVIRONMENT=$DEFAULT_ENVIRONMENT
 
